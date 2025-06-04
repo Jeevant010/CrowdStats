@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@thirdweb-dev/contracts": "^3.8.0",
+    "dotenv": "^16.5.0",
     "zksync-ethers": "^5.7.0"
   }
 }
