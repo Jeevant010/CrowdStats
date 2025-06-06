@@ -1,1 +1,0 @@
-export { formatNumberText } from './formatNumberText';

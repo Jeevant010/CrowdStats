@@ -1,1 +1,0 @@
-export { deriveSharedSecret } from './deriveSharedSecret';

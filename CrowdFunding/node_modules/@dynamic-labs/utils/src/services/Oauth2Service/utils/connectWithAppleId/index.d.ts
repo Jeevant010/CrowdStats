@@ -1,1 +1,0 @@
-export { connectWithAppleId } from './connectWithAppleId';

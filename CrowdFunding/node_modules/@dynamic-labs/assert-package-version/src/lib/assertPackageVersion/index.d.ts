@@ -1,1 +1,0 @@
-export { assertPackageVersion } from './assertPackageVersion';

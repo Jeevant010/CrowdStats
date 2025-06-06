@@ -1,1 +1,0 @@
-export { setupPlatformService } from './setupPlatformService';

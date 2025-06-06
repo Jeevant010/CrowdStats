@@ -1,1 +1,0 @@
-export { isInIframe } from './isInIframe';

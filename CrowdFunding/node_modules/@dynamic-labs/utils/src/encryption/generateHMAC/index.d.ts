@@ -1,1 +1,0 @@
-export { generateHMAC } from './generateHMAC';

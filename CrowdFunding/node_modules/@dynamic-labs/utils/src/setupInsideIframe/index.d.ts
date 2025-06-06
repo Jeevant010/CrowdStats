@@ -1,1 +1,0 @@
-export { setupInsideIframe } from './setupInsideIframe';

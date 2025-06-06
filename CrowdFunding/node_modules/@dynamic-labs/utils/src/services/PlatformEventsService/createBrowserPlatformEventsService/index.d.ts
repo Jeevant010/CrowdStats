@@ -1,1 +1,0 @@
-export { createBrowserPlatformEventsService } from './createBrowserPlatformEventsService';

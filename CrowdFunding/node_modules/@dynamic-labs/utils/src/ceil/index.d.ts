@@ -1,1 +1,0 @@
-export { ceil } from './ceil';

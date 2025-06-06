@@ -1,1 +1,0 @@
-export { isEncryptedMessage } from './isEncryptedMessage';

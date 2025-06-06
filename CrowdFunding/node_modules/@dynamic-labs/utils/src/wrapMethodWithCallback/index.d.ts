@@ -1,1 +1,0 @@
-export { wrapMethodWithCallback } from './wrapMethodWithCallback';

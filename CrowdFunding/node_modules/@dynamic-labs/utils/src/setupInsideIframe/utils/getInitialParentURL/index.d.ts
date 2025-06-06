@@ -1,1 +1,0 @@
-export { getInitialParentURL } from './getInitialParentURL';

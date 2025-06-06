@@ -1,1 +1,0 @@
-export { isHex } from './isHex';
