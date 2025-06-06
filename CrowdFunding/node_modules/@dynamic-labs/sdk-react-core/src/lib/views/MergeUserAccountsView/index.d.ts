@@ -1,0 +1,1 @@
+export { MergeUserAccountsView } from './MergeUserAccountsView';

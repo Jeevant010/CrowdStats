@@ -1,0 +1,1 @@
+export { isBloctoConnector } from './isBloctoConnector';

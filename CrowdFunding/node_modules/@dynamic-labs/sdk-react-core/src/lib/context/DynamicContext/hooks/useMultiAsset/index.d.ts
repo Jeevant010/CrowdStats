@@ -1,0 +1,1 @@
+export { useMultiAsset } from './useMultiAsset';

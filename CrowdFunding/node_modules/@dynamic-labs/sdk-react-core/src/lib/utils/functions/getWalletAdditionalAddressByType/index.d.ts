@@ -1,0 +1,1 @@
+export { getWalletAdditionalAddressByType } from './getWalletAdditionalAddressByType';

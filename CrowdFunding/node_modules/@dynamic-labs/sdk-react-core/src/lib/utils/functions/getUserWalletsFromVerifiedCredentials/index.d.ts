@@ -1,0 +1,1 @@
+export { getUserWalletsFromVerifiedCredentials } from './getUserWalletsFromVerifiedCredentials';

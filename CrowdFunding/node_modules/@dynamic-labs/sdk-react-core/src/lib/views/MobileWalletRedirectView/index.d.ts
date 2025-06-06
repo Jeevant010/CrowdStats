@@ -1,0 +1,1 @@
+export { MobileWalletRedirectView } from './MobileWalletRedirectView';

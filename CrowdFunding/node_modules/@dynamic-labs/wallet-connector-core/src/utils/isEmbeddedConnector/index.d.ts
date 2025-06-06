@@ -1,0 +1,1 @@
+export { isEmbeddedConnector } from './isEmbeddedConnector';

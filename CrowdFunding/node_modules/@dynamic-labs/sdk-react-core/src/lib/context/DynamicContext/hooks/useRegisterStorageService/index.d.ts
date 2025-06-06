@@ -1,0 +1,1 @@
+export { useRegisterStorageService } from './useRegisterStorageService';

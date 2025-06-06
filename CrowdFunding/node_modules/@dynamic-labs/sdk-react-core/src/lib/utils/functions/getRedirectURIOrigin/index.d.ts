@@ -1,0 +1,1 @@
+export { getRedirectURIOrigin } from './getRedirectURIOrigin';

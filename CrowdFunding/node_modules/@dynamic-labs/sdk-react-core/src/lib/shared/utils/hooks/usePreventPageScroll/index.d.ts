@@ -1,0 +1,1 @@
+export { usePreventPageScroll } from './usePreventPageScroll';

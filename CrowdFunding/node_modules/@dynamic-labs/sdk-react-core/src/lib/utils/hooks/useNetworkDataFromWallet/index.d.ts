@@ -1,0 +1,1 @@
+export { useNetworkDataFromWallet } from './useNetworkDataFromWallet';

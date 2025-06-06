@@ -1,0 +1,1 @@
+export { useFetchNameService } from './useFetchNameService';

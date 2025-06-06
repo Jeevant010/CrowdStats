@@ -1,0 +1,1 @@
+export { NoQrNotInstalledView } from './NoQrNotInstalledView';

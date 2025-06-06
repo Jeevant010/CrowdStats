@@ -1,0 +1,1 @@
+export { EmbeddedRevealView } from './EmbeddedRevealView';

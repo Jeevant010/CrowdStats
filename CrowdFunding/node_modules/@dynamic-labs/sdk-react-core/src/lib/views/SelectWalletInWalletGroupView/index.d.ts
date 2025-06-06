@@ -1,0 +1,1 @@
+export { SelectWalletInWalletGroupView } from './SelectWalletInWalletGroupView';

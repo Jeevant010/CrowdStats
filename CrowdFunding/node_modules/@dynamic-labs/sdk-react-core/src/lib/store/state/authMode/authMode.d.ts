@@ -1,0 +1,1 @@
+export declare const getAuthMode: () => import("dist/packages/types/src").AuthMode, setAuthMode: (value: import("dist/packages/types/src").AuthMode) => void, useAuthMode: () => import("dist/packages/types/src").AuthMode;

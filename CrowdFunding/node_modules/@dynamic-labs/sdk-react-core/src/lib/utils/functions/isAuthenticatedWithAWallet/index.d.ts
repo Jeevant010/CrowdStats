@@ -1,0 +1,1 @@
+export { isAuthenticatedWithAWallet } from './isAuthenticatedWithAWallet';

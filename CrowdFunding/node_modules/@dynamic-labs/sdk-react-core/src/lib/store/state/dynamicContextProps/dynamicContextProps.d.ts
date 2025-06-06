@@ -1,0 +1,16 @@
+import { DynamicContextProps } from '../../../context/DynamicContext/types';
+import { defaultDynamicSettings } from './defaultDynamicSettings';
+export declare const getDynamicContextProps: () => Pick<DynamicContextProps, "settings" | "emitErrors" | "enableInstrumentation" | "locale" | "theme">, setDynamicContextProps: (value: Pick<DynamicContextProps, "settings" | "emitErrors" | "enableInstrumentation" | "locale" | "theme">) => void, useDynamicContextProps: () => Pick<DynamicContextProps, "settings" | "emitErrors" | "enableInstrumentation" | "locale" | "theme">;
+export type SettingsWithDefaults = typeof defaultDynamicSettings & DynamicContextProps['settings'];
+export declare const getDynamicSettings: () => SettingsWithDefaults;
+export declare const useDynamicSettings: () => SettingsWithDefaults;
+export declare const getEnvironmentId: () => string;
+export declare const useEnvironmentId: () => string;
+export declare const setEnvironmentId: (environmentId: string) => void;
+export declare const getApiBaseUrl: () => string | undefined;
+export declare const useApiBaseUrl: () => string | undefined;
+export declare const isBridgeFlow: () => boolean;
+export declare const getBridgeChains: () => import("../../../context/DynamicContext/types").ChainsToConnect[] | undefined;
+export declare const useBridgeChains: () => import("../../../context/DynamicContext/types").ChainsToConnect[] | undefined;
+export declare const applyDefaultSettings: (settings: DynamicContextProps['settings']) => SettingsWithDefaults;
+export declare const useSyncDynamicContextProps: ({ settings, emitErrors, enableInstrumentation, locale, theme, }: DynamicContextProps) => void;

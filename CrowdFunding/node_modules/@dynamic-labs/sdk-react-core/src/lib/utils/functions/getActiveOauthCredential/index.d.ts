@@ -1,0 +1,1 @@
+export { getActiveOauthCredential } from './getActiveOauthCredential';

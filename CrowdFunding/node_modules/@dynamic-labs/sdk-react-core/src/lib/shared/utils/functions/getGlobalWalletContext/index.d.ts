@@ -1,0 +1,1 @@
+export { getGlobalWalletContext } from './getGlobalWalletContext';

@@ -1,0 +1,1 @@
+export { isBitcoinConnector } from './isBitcoinConnector';

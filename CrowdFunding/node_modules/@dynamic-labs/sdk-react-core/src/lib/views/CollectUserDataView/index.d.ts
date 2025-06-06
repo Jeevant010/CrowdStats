@@ -1,0 +1,1 @@
+export { CollectUserDataView } from './CollectUserDataView';

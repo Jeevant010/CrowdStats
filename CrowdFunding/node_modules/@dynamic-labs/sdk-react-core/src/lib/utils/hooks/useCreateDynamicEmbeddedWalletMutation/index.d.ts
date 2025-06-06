@@ -1,0 +1,1 @@
+export { useCreateDynamicEmbeddedWalletMutation } from './useCreateDynamicEmbeddedWalletMutation';

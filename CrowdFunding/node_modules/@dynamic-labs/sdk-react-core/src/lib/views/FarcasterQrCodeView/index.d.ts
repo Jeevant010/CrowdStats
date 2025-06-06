@@ -1,0 +1,1 @@
+export { FarcasterQrCodeView } from './FarcasterQrCodeView';

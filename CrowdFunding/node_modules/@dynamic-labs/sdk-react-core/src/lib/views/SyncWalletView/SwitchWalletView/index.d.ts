@@ -1,0 +1,1 @@
+export { SwitchWalletView } from './SwitchWalletView';

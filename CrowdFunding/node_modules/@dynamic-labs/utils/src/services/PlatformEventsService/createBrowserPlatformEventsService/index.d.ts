@@ -1,0 +1,1 @@
+export { createBrowserPlatformEventsService } from './createBrowserPlatformEventsService';

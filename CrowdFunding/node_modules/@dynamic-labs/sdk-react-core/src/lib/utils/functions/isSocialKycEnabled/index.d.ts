@@ -1,0 +1,1 @@
+export { isSocialKycEnabled } from './isSocialKycEnabled';

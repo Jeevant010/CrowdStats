@@ -1,0 +1,1 @@
+export { BridgeWelcomeView } from './BridgeWelcomeView';

@@ -1,0 +1,1 @@
+export { verifyMagicIsSetup } from './verifyMagicIsSetup';

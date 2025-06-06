@@ -1,0 +1,1 @@
+export { EmailConfirmationWaitingView } from './EmailConfirmationWaitingView';

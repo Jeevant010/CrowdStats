@@ -1,0 +1,1 @@
+export { isCookieEnabled } from './isCookieEnabled';

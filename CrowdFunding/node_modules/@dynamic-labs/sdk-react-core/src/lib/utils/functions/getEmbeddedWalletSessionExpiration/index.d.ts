@@ -1,0 +1,1 @@
+export { getEmbeddedWalletSessionExpiration } from './getEmbeddedWalletSessionExpiration';

@@ -1,0 +1,1 @@
+export { useSetWalletConnectorVerifiedCredentials } from './useSetWalletConnectorVerifiedCredentials';

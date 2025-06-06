@@ -1,0 +1,1 @@
+export { useKYCFlag } from './useKYCFlag';

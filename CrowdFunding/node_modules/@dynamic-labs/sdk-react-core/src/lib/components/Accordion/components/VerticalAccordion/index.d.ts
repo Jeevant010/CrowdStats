@@ -1,0 +1,1 @@
+export { VerticalAccordion } from './VerticalAccordion';

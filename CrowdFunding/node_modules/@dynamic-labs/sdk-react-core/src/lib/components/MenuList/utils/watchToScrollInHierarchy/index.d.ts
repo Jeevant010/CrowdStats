@@ -1,0 +1,1 @@
+export { watchToScrollInHierarchy } from './watchToScrollInHierarchy';

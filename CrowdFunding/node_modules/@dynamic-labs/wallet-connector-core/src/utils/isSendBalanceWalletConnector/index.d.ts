@@ -1,0 +1,1 @@
+export { isSendBalanceWalletConnector } from './isSendBalanceWalletConnector';

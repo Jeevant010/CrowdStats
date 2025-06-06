@@ -1,0 +1,1 @@
+export { getEmbeddedWalletAuthHandler } from './getEmbeddedWalletAuthHandler';

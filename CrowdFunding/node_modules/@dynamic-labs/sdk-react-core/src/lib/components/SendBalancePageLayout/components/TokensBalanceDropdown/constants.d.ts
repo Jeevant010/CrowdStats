@@ -1,0 +1,2 @@
+export declare const zeroAddress = "0x0000000000000000000000000000000000000000";
+export declare const nativeSolanaAddress = "11111111111111111111111111111111";

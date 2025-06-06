@@ -1,0 +1,1 @@
+export { verifyZeroDevIsSetup } from './verifyZeroDevIsSetup';

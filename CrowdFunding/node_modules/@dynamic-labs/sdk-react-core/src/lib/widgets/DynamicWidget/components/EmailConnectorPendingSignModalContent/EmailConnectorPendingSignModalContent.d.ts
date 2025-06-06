@@ -1,0 +1,2 @@
+import { EmailConnectorPendingSignModalContentComponent } from './EmailConnectorPendingSignModalContent.types';
+export declare const EmailConnectorPendingSignModalContent: EmailConnectorPendingSignModalContentComponent;

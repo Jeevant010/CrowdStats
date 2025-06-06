@@ -1,0 +1,1 @@
+export { isClassNamesObjectArg } from './isClassNamesObjectArg';

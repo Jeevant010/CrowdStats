@@ -1,0 +1,1 @@
+export { ConnectedWalletsListLayout } from './ConnectedWalletsListLayout';

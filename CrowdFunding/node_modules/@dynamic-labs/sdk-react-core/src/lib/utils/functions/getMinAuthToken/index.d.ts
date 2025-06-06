@@ -1,0 +1,1 @@
+export { getMinAuthToken } from './getMinAuthToken';

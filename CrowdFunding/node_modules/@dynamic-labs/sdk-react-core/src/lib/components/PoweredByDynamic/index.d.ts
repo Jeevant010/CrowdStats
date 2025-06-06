@@ -1,0 +1,1 @@
+export { PoweredByDynamic } from './PoweredByDynamic';

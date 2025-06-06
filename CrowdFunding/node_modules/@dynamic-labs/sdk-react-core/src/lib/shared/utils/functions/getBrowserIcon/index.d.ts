@@ -1,0 +1,1 @@
+export { getBrowserIcon } from './getBrowserIcon';

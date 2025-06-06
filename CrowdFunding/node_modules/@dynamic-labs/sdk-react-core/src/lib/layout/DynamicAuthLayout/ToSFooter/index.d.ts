@@ -1,0 +1,1 @@
+export { ToSFooter } from './ToSFooter';

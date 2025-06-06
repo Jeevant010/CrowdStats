@@ -1,0 +1,1 @@
+export { removeElementById } from './removeElementById';

@@ -1,0 +1,1 @@
+export { updatePrimaryWalletId } from './updatePrimaryWalletId';

@@ -1,0 +1,1 @@
+export { useRemoveWallet } from './useRemoveWallet';

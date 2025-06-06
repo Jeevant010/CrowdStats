@@ -1,0 +1,1 @@
+export { isSupportedNetwork } from './isSupportedNetwork';

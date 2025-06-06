@@ -1,0 +1,5 @@
+import { AuthenticationResponseJSON, PublicKeyCredentialCreationOptionsJSON, PublicKeyCredentialRequestOptionsJSON, RegistrationResponseJSON } from '@simplewebauthn/types';
+export type CreateWebauthnCredentialOptions = PublicKeyCredentialCreationOptionsJSON;
+export type CreateWebauthnCredentialsResponse = RegistrationResponseJSON;
+export type AuthenticateWebauthnCredentialOptions = PublicKeyCredentialRequestOptionsJSON;
+export type AuthenticateWebauthnCredentialsResponse = AuthenticationResponseJSON;

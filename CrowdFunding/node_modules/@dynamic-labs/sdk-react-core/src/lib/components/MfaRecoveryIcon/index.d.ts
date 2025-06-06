@@ -1,0 +1,1 @@
+export { MfaRecoveryScreenIcon } from './MfaRecoveryIcon';

@@ -1,0 +1,16 @@
+'use client'
+const getWalletGroupType = (walletGroup) => {
+    if (!walletGroup.groupedWallets.length) {
+        throw new Error('Wallet group must have at least one wallet');
+    }
+    const [wallet] = walletGroup.groupedWallets;
+    if (wallet.chainGroup) {
+        return 'multi-chain';
+    }
+    if (wallet.walletGroup) {
+        return 'multi-wallet';
+    }
+    return undefined;
+};
+
+export { getWalletGroupType };

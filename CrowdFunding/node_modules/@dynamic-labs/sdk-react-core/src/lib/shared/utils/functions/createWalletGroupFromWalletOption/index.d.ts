@@ -1,0 +1,1 @@
+export { createWalletGroupFromWalletOption } from './createWalletGroupFromWalletOption';

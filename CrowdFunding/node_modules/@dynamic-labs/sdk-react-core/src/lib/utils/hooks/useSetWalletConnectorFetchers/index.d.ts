@@ -1,0 +1,1 @@
+export { useSetWalletConnectorFetchers } from './useSetWalletConnectorFetchers';

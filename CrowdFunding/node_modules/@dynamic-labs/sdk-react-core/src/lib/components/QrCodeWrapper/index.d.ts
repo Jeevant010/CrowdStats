@@ -1,0 +1,1 @@
+export { QrCodeWrapper } from './QrCodeWrapper';

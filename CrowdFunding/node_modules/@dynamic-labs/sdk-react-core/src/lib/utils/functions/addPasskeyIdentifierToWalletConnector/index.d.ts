@@ -1,0 +1,1 @@
+export { addPasskeyIdentifierToWalletConnector } from './addPasskeyIdentifierToWalletConnector';

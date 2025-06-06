@@ -1,0 +1,1 @@
+export { isAllowedToLinkWallet } from './isAllowedToLinkWallet';

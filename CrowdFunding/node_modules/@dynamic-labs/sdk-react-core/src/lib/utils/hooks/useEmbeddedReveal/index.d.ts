@@ -1,0 +1,1 @@
+export { useEmbeddedReveal } from './useEmbeddedReveal';

@@ -1,0 +1,1 @@
+export { isCoinbaseWaasEnabled } from './isCoinbaseWaasEnabled';

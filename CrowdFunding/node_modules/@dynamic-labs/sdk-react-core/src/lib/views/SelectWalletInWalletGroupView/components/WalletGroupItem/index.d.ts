@@ -1,0 +1,1 @@
+export { WalletGroupItem } from './WalletGroupItem';

@@ -1,0 +1,1 @@
+export { isConnectorMethodSupported } from './isConnectorMethodSupported';

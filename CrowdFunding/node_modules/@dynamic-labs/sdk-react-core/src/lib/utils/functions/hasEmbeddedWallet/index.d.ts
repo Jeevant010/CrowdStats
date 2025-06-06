@@ -1,0 +1,1 @@
+export { hasEmbeddedWallet } from './hasEmbeddedWallet';

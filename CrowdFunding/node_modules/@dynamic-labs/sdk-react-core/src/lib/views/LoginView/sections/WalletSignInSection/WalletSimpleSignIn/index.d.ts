@@ -1,0 +1,1 @@
+export { WalletSimpleSignIn } from './WalletSimpleSignIn';

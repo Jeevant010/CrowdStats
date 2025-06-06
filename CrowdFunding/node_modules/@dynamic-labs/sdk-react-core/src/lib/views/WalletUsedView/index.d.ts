@@ -1,0 +1,1 @@
+export { WalletUsedView } from './WalletUsedView';

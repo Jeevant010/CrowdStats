@@ -1,0 +1,24 @@
+import { FC, MouseEventHandler, ReactNode } from 'react';
+import { WalletConnector } from '@dynamic-labs/wallet-connector-core';
+import { IUITransaction } from '@dynamic-labs/types';
+import { TokenBalance } from '@dynamic-labs/sdk-api-core';
+import { CopyKey } from '../../shared';
+export declare const FEE_REFRESH_INTERVAL = 20000;
+export type TransactionConfirmationViewProps = {
+    displayPoweredByDynamicFooter?: boolean;
+    mutation: () => Promise<string>;
+    onClickBack?: MouseEventHandler<HTMLButtonElement>;
+    onClickClose?: MouseEventHandler<HTMLButtonElement>;
+    onError?: (error: unknown) => void;
+    hideModal?: boolean;
+    onSuccess?: (receipt: string) => void;
+    title: ReactNode;
+    transaction: IUITransaction;
+    walletConnector?: WalletConnector;
+    currentToken?: TokenBalance;
+    isNativeToken?: boolean;
+    transactionValue?: string;
+    isModal?: boolean;
+    sendBalanceTransaction?: boolean;
+} & CopyKey;
+export declare const TransactionConfirmationView: FC<TransactionConfirmationViewProps>;

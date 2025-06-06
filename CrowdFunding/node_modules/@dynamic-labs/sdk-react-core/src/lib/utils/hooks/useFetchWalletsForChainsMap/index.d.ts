@@ -1,0 +1,1 @@
+export { useFetchWalletsForChainsMap } from './useFetchWalletsForChainsMap';

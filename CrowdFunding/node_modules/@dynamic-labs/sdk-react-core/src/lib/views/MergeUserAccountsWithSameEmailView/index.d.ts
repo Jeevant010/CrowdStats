@@ -1,0 +1,1 @@
+export { MergeUserAccountsWithSameEmailView } from './MergeUserAccountsWithSameEmailView';

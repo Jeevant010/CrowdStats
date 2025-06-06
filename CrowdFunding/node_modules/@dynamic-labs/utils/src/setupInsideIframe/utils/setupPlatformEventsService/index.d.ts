@@ -1,0 +1,1 @@
+export { setupPlatformEventsService } from './setupPlatformEventsService';

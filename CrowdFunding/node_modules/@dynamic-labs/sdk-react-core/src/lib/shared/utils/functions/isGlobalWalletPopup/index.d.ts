@@ -1,0 +1,1 @@
+export { isGlobalWalletPopup } from './isGlobalWalletPopup';

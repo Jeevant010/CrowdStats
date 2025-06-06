@@ -1,0 +1,1 @@
+export declare const getPrimaryWalletId: () => string | undefined, setPrimaryWalletId: (value: string | undefined) => void, usePrimaryWalletId: () => string | undefined, resetPrimaryWalletId: () => void;

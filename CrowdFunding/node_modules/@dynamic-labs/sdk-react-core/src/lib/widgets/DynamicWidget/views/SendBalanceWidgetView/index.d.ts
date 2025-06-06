@@ -1,0 +1,1 @@
+export { SendBalanceWidgetView } from './SendBalanceWidgetView';

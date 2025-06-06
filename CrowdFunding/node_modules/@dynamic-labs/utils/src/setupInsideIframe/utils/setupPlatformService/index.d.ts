@@ -1,0 +1,1 @@
+export { setupPlatformService } from './setupPlatformService';

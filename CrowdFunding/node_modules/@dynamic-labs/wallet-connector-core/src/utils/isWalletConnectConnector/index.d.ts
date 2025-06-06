@@ -1,0 +1,1 @@
+export { isWalletConnectConnector } from './isWalletConnectConnector';

@@ -1,0 +1,1 @@
+export { decryptMessage } from './decryptMessage';

@@ -1,0 +1,1 @@
+export { RenamePasskeyView } from './RenamePasskeyView';

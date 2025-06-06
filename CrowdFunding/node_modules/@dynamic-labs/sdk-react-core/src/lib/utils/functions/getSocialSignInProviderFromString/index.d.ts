@@ -1,0 +1,1 @@
+export { getSocialSignInProviderFromString } from './getSocialSignInProviderFromString';

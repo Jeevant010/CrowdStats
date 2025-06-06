@@ -1,0 +1,1 @@
+export { PendingSignatureView } from './PendingSignatureView';

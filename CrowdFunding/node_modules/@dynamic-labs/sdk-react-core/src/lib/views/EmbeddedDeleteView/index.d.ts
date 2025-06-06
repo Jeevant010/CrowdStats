@@ -1,0 +1,1 @@
+export { EmbeddedDeleteView } from './EmbeddedDeleteView';

@@ -1,0 +1,1 @@
+export { getProviderByType } from './getProviderByType';

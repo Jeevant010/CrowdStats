@@ -1,0 +1,1 @@
+export { isDynamicWaasConnector } from './isDynamicWaasConnector';

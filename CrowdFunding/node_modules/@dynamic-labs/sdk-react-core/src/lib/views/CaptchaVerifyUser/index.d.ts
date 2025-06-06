@@ -1,0 +1,1 @@
+export { CaptchaVerifyUser } from './CaptchaVerifyUser';

@@ -1,0 +1,1 @@
+export { EmailConnectorPendingSignModalContent } from './EmailConnectorPendingSignModalContent';

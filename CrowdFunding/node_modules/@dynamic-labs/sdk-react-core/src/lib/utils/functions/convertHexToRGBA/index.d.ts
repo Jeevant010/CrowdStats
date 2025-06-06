@@ -1,0 +1,1 @@
+export { convertHexToRGBA } from './convertHexToRGBA';

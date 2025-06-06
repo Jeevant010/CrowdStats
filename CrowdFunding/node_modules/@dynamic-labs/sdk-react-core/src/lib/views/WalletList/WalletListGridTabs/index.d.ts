@@ -1,0 +1,1 @@
+export { WalletListGridTabs } from './WalletListGridTabs';

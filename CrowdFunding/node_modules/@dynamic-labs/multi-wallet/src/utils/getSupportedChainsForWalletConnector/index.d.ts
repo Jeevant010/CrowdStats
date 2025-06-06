@@ -1,0 +1,1 @@
+export { getSupportedChainsForWalletConnector } from './getSupportedChainsForWalletConnector';

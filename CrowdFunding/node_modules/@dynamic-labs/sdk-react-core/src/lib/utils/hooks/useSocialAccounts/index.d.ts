@@ -1,0 +1,1 @@
+export { useSocialAccounts } from './useSocialAccounts';

@@ -1,0 +1,22 @@
+import { Dispatch, FC, MouseEventHandler, ReactNode, SetStateAction } from 'react';
+import { TokenBalance } from '@dynamic-labs/sdk-api-core';
+import { IUITransaction } from '@dynamic-labs/types';
+export type SendBalancePageLayoutProps = {
+    transaction: IUITransaction;
+    displayPoweredByDynamicFooter?: boolean;
+    error?: string;
+    networkIcon?: ReactNode;
+    networkName?: string;
+    networkCurrencyDecimals?: number;
+    onClickBack?: MouseEventHandler<HTMLButtonElement>;
+    onClickClose?: MouseEventHandler<HTMLButtonElement>;
+    onSubmit: () => void;
+    walletAddress: string;
+    walletKey?: string;
+    tokenBalances: TokenBalance[] | undefined;
+    currentToken: TokenBalance | undefined;
+    setCurrentToken: Dispatch<SetStateAction<TokenBalance | undefined>>;
+    isLoading?: boolean;
+    isNativeToken: boolean;
+};
+export declare const SendBalancePageLayout: FC<SendBalancePageLayoutProps>;

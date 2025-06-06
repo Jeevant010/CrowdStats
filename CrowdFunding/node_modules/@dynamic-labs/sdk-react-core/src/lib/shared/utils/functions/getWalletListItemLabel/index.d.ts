@@ -1,0 +1,1 @@
+export { getWalletListItemLabel } from './getWalletListItemLabel';

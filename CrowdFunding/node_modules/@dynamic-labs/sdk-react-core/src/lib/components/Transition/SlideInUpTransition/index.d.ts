@@ -1,0 +1,1 @@
+export { SlideInUpTransition } from './SlideInUpTransition';

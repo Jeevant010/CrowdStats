@@ -1,0 +1,1 @@
+export { DynamicWidgetWalletHeader } from './DynamicWidgetWalletHeader';

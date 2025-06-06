@@ -1,0 +1,1 @@
+export { pixelToRem } from './pixelToRem';

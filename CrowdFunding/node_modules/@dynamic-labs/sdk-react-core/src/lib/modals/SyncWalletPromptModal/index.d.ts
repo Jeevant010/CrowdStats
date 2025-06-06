@@ -1,0 +1,1 @@
+export { SyncWalletPromptModal } from './SyncWalletPromptModal';

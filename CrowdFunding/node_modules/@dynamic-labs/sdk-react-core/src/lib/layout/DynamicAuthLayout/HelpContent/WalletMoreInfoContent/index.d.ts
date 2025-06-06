@@ -1,0 +1,1 @@
+export { WalletMoreInfoContent } from './WalletMoreInfoContent';

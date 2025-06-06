@@ -1,0 +1,1 @@
+export { useWalletConnectorEvent } from './useWalletConnectorEvent';

@@ -1,0 +1,1 @@
+export { SignMessageConfirmationModal } from './SignMessageConfirmationModal';

@@ -1,0 +1,1 @@
+export { BridgeNextWalletToConnectLayout } from './BridgeNextWalletToConnectLayout';

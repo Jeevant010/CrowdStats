@@ -1,0 +1,1 @@
+export { createKeyPair } from './createKeyPair';

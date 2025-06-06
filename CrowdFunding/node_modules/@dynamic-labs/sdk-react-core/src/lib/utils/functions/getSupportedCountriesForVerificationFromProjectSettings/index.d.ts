@@ -1,0 +1,1 @@
+export { getSupportedCountriesForVerificationFromProjectSettings } from './getSupportedCountriesForVerificationFromProjectSettings';

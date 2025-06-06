@@ -1,0 +1,1 @@
+export { isEmailOTPWalletConnector } from './isEmailOTPWalletConnector';

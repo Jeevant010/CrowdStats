@@ -1,0 +1,1 @@
+export { SecureEmbeddedWalletCard } from './SecureEmbeddedWalletCard';

@@ -1,0 +1,1 @@
+export { subscribeWithSelector } from './subscribeWithSelector';

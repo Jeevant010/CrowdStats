@@ -1,0 +1,1 @@
+export { isThemeSetting } from './isThemeSetting';

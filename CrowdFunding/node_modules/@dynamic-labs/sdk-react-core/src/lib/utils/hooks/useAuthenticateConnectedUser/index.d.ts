@@ -1,0 +1,1 @@
+export { useAuthenticateConnectedUser } from './useAuthenticateConnectedUser';

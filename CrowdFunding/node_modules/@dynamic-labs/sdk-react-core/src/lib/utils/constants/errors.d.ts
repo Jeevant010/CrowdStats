@@ -1,0 +1,16 @@
+export declare const MISSING_ADDRESS_ERROR = "missing_address";
+export declare const ACTIVE_SESSION = "session_active";
+export declare const ERROR_SENDING_CODE = "error_sending_code";
+export declare const ERROR_PROCESSING_REVEAL_REQUEST = "error_processing_reveal_request";
+export declare const INVALID_REQUEST = "invalid_request";
+export declare const INVALID_WALLET_DATA = "invalid_wallet";
+export declare const SECURE_ENCLAVE_PROVIDER_NOT_ENABLED = "secure_enclave_provider_not_enabled";
+export declare const NO_SECURE_ENCLAVE_WALLET_FOUND = "no_secure_enclave_wallet_found";
+export declare const USER_NOT_LOGGED_IN = "user_not_logged_in";
+export declare const WALLET_NOT_SESSION_KEY_COMPATIBLE = "wallet_not_session_key_compatible";
+export declare const INCOMPATIBLE_SDK_VERSION = "incompatible_sdk_version";
+export declare const USER_HAS_V2_EMBEDDED_WALLET = "user_has_v2_embedded_wallet";
+export declare const CODE_SENT = "code_sent";
+export declare const SESSION_CREATED = "session_created";
+export declare const SESSION_RESTORED = "session_restored";
+export declare const ACCESS_BLOCKED_ERROR_CODE = 451;

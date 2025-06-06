@@ -1,0 +1,1 @@
+export { DynamicAuthLayout } from './DynamicAuthLayout';

@@ -1,0 +1,1 @@
+export { normalizeAddress } from './normalizeAddress';

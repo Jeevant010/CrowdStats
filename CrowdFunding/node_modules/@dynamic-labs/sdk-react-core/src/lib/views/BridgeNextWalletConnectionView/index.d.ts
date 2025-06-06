@@ -1,0 +1,1 @@
+export { BridgeNextWalletConnectionView } from './BridgeNextWalletConnectionView';

@@ -1,0 +1,1 @@
+export { IsBrowser } from './IsBrowser';

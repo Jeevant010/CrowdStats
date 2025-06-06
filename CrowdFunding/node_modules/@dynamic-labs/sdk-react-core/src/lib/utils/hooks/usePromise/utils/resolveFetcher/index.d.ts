@@ -1,0 +1,1 @@
+export { resolveFetcher } from './resolveFetcher';

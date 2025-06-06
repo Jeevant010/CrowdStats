@@ -1,0 +1,1 @@
+export { syncLegacyStorage } from './syncLegacyStorage';

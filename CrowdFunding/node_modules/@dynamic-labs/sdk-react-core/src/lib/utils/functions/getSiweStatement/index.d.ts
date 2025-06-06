@@ -1,0 +1,1 @@
+export { getSiweStatement } from './getSiweStatement';

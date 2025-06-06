@@ -1,0 +1,1 @@
+export { createLinkedWalletsFromWalletOptions } from './createLinkedWalletsFromWalletOptions';

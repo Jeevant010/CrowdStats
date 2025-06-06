@@ -1,0 +1,1 @@
+export { isSessionKeyCompatibleWalletConnector } from './isSessionKeyCompatibleWalletConnector';

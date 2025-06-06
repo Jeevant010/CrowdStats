@@ -1,0 +1,1 @@
+export { PasskeyCard } from './PasskeyCard';

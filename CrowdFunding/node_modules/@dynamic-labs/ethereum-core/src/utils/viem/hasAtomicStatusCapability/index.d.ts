@@ -1,0 +1,1 @@
+export { hasAtomicStatusCapability } from './hasAtomicStatusCapability';

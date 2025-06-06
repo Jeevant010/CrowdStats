@@ -1,0 +1,1 @@
+export { useUpgradeEmbeddedWallet } from './useUpgradeEmbeddedWallet';
