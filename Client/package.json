@@ -11,6 +11,7 @@
   "dependencies": {
     "react": "^18.3",
     "react-dom": "^18.3",
+    "react-router-dom": "^7.6.2",
     "thirdweb": "^5"
   },
   "devDependencies": {
