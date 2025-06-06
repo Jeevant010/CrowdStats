@@ -8,6 +8,7 @@ createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ThirdwebProvider>
       <App />
+      
     </ThirdwebProvider>
   </React.StrictMode>
 );
