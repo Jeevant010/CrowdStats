@@ -1,25 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AppProviders } from './context/index';
+import Navbar from './components/Navbar';
+import Footer from './components/footer';
+import HomePage from './pages/HomePage';
+import CampaignsPage from './pages/CampaignPage';
+import CreateCampaignPage from './pages/CreateCampaignPage';
+import DashboardPage from './pages/DashboardPage';
+// import CampaignDetailsPage from './pages/CampaignDetailsPage';
+import NotFoundPage from './pages/NotFoundPage';
+import './styles/global.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppProviders>
+      <Router>
+        <div className="app">
+          <Navbar />
+          <main className="main-content">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/campaigns" element={<CampaignsPage />} />
+              {/* <Route path="/campaigns/:id" element={<CampaignDetailsPage />} /> */}
+              <Route path="/create" element={<CreateCampaignPage />} />
+              <Route path="/dashboard" element={<DashboardPage />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </AppProviders>
   );
 }
 
