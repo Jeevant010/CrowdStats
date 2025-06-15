@@ -1,5 +1,4 @@
-import React from 'react';
-import { useCampaigns } from '../context/CampaignContext';
+import React, { useEffect, useState } from 'react';
 import './Dashboard.css';
 
 // Fixed campaigns (must match those in CreateCampaign)
@@ -34,17 +33,44 @@ const FIXED_CAMPAIGNS = [
 ];
 
 const Dashboard = () => {
-  const { campaigns } = useCampaigns();
+  const [activeCampaigns, setActiveCampaigns] = useState([]);
 
-  // Combine fixed and user-created campaigns
-  const allCampaigns = [
-    ...FIXED_CAMPAIGNS,
-    ...campaigns.filter(c => !c.isFixed)
-  ];
+  useEffect(() => {
+    // 1. Read logs from localStorage
+    const logsData = localStorage.getItem('campaigns_log');
+    let logs = [];
+    if (logsData) {
+      try {
+        logs = JSON.parse(logsData);
+      } catch {
+        logs = [];
+      }
+    }
+
+    // 2. Extract all created campaigns
+    const createdCampaigns = {};
+    const removedCampaignIds = new Set();
+
+    logs.forEach(log => {
+      if (log.action === 'created') {
+        createdCampaigns[log.campaign.id] = log.campaign;
+      } else if (log.action === 'removed') {
+        removedCampaignIds.add(log.campaign.id);
+      }
+    });
+
+    // 3. Only keep those not removed
+    const logCampaigns = Object.values(createdCampaigns).filter(
+      c => !removedCampaignIds.has(c.id)
+    );
+
+    // 4. Combine with fixed campaigns
+    setActiveCampaigns([...FIXED_CAMPAIGNS, ...logCampaigns]);
+  }, []);
 
   // Calculate stats
-  const totalCampaigns = allCampaigns.length;
-  const totalGoal = allCampaigns.reduce((sum, c) => sum + (c.goal || 0), 0);
+  const totalCampaigns = activeCampaigns.length;
+  const totalGoal = activeCampaigns.reduce((sum, c) => sum + (c.goal || 0), 0);
 
   return (
     <div className="dashboard-container">
@@ -61,11 +87,11 @@ const Dashboard = () => {
       </div>
       <section className="dashboard-campaigns">
         <h2>Active Campaigns</h2>
-        {allCampaigns.length === 0 ? (
+        {activeCampaigns.length === 0 ? (
           <p>No active campaigns.</p>
         ) : (
           <ul className="campaigns-list">
-            {allCampaigns.map(c => (
+            {activeCampaigns.map(c => (
               <li key={c.id} className="campaign-card">
                 <h3>{c.title}</h3>
                 <p>{c.description}</p>
