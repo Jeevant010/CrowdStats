@@ -12,29 +12,19 @@ export default function CampaignDetails() {
   // For now, we will use static data for demonstration purposes. but use multiple components to structure the page.
 
   return (
-    <div className="campaign-details">
-      <div className="camp_1">
-      <h1 className="campaign-title">Campaign Title</h1>
+    <div className="campaign-details-container">
+      <h1>Campaign Title</h1>
       <p className="campaign-description">
-        This is a detailed description of the crowdfunding campaign. It explains the purpose of the campaign, how the funds will be used, and why it is important.
+        This is a detailed description of the campaign. It explains the purpose, goals, and impact of the project.
       </p>
-      <div className="funding-goal">
-        <h2>Funding Goal: $10,000</h2>
-        <h3>Current Amount Raised: $5,000</h3>
+      <div className="funding-info">
+        <p className="funding-goal">Funding Goal: $10,000</p>
+        <p className="amount-raised">Amount Raised: $2,500</p>
       </div>
-      <button className="contribute-button">Contribute Now</button>
-      </div>
-      <div className="camp_2">
-        <h2>Campaign Updates</h2>
-        <p>Stay tuned for updates on the campaign progress and how your contributions are making a difference!</p>
-        <ul className="campaign-updates">
-          <li>Update 1: We reached 50% of our funding goal!</li>
-          <li>Update 2: Thank you to all our contributors!</li>
-          <li>Update 3: We're working hard to bring you the best rewards!</li>
-        </ul>
-      </div>
+      <button className="contribute-button">Contribute to Campaign</button>
     </div>
-    
+   
+
       
 
     

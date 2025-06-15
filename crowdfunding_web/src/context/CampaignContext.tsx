@@ -1,6 +1,5 @@
 import React, { createContext, useState, useContext } from 'react';
 
-// Define campaign type
 interface Campaign {
   id: string;
   title: string;
@@ -8,30 +7,47 @@ interface Campaign {
   goal: number;
   image?: string;
   createdAt: Date;
-  // Add other properties as needed
+  raisedAmount: number;
 }
 
 interface CampaignContextType {
   campaigns: Campaign[];
-  addCampaign: (campaign: Omit<Campaign, 'id' | 'createdAt'>) => void;
+  addCampaign: (campaign: Omit<Campaign, 'id' | 'createdAt' | 'raisedAmount'>) => void;
+  donateToCampaign: (campaignId: string, amount: number) => void;
 }
 
 const CampaignContext = createContext<CampaignContextType | undefined>(undefined);
 
 export const CampaignProvider: React.FC<{children: React.ReactNode}> = ({ children }) => {
+  // Initialize with an empty array to avoid the "is not a function" error
   const [campaigns, setCampaigns] = useState<Campaign[]>([]);
 
-  const addCampaign = (campaignData: Omit<Campaign, 'id' | 'createdAt'>) => {
+  const addCampaign = (campaignData: Omit<Campaign, 'id' | 'createdAt' | 'raisedAmount'>) => {
     const newCampaign = {
       ...campaignData,
-      id: Date.now().toString(), // Simple ID generation
-      createdAt: new Date()
+      id: Date.now().toString(),
+      createdAt: new Date(),
+      raisedAmount: 0
     };
-    setCampaigns([...campaigns, newCampaign]);
+    setCampaigns(prevCampaigns => [...prevCampaigns, newCampaign]);
+  };
+
+  const donateToCampaign = (campaignId: string, amount: number) => {
+    setCampaigns(prevCampaigns => 
+      prevCampaigns.map(campaign => 
+        campaign.id === campaignId 
+          ? { ...campaign, raisedAmount: (campaign.raisedAmount || 0) + amount }
+          : campaign
+      )
+    );
   };
 
   return (
-    <CampaignContext.Provider value={{ campaigns, addCampaign }}>
+    <CampaignContext.Provider value={{ 
+      campaigns, 
+      addCampaign,
+      donateToCampaign
+    }}>
       {children}
     </CampaignContext.Provider>
   );
@@ -43,4 +59,4 @@ export const useCampaigns = () => {
     throw new Error('useCampaigns must be used within a CampaignProvider');
   }
   return context;
-};
+}; 
