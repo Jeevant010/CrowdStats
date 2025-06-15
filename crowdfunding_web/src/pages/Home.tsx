@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import './Home.css';
 
 // Same fixed campaigns as in CreateCampaign
@@ -61,11 +62,13 @@ export default function Home() {
   return (
     <div className="home-container">
       <section className="hero-section">
-        <h1>Welcome to <span className="gradient-text">CrowdStats</span></h1>
+        <h1>
+          Welcome to <span className="gradient-text">CrowdStats</span>
+        </h1>
         <p>Support innovative projects and ideas</p>
-        <a href="/create-campaign" className="cta-button">
+        <Link to="/create-campaign" className="cta-button">
           Start a Campaign
-        </a>
+        </Link>
       </section>
 
       <section className="campaigns-section">
@@ -73,7 +76,7 @@ export default function Home() {
         {allCampaigns.length === 0 ? (
           <div className="no-campaigns">
             <p>No campaigns have been created yet.</p>
-            <a href="/create-campaign">Create the first campaign</a>
+            <Link to="/create-campaign">Create the first campaign</Link>
           </div>
         ) : (
           <div className="campaigns-grid">
@@ -97,7 +100,6 @@ export default function Home() {
                 {c.isFixed && (
                   <span className="fixed-label">Featured</span>
                 )}
-                {/* Add more campaign info or actions as needed */}
               </div>
             ))}
           </div>
