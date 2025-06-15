@@ -1,18 +1,19 @@
-import React from "react";
+import './CampaignCard.css';
 
-export default function CampaignCard({ title, description, target, owner, collected, image, onDonate }) {
+export default function CampaignCard({ title, description, target, collected, owner, image, onDonate }) {
   const progress = Math.min((collected / target) * 100, 100);
 
   return (
-    <div className="rounded-lg shadow-lg bg-white p-6 mb-6">
-      <img src={image} alt={title} className="rounded w-full h-48 object-cover mb-4" />
-      <h3 className="font-bold text-xl mb-2">{title}</h3>
-      <p className="mb-2">{description}</p>
-      <div className="w-full bg-gray-200 rounded-full h-2.5 mb-4">
-        <div className="bg-green-500 h-2.5 rounded-full" style={{ width: `${progress}%` }}></div>
+    <div className="campaign-card">
+      <img src={image} alt={title} className="campaign-image" />
+      <div className="campaign-title">{title}</div>
+      <div className="campaign-desc">{description}</div>
+      <div className="campaign-progress-bar">
+        <div className="campaign-progress" style={{ width: `${progress}%` }} />
       </div>
-      <p className="text-sm mb-2">Raised: {collected} / {target} ETH</p>
-      <button onClick={onDonate} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Donate</button>
+      <div className="campaign-info">Raised: {collected} / {target} ETH</div>
+      <div className="campaign-info">Owner: {owner.slice(0,6)}...{owner.slice(-4)}</div>
+      <button className="campaign-donate-btn" onClick={onDonate}>Donate</button>
     </div>
   );
 }
