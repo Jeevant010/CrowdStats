@@ -36,34 +36,40 @@ const CreateCampaign = () => {
   const [description, setDescription] = useState('');
   const [goal, setGoal] = useState('');
   const [image, setImage] = useState('');
+  const [activeTime, setActiveTime] = useState('5'); // Default 5 seconds
   const [campaigns, setCampaigns] = useState(getCampaigns());
   const [logs, setLogs] = useState(getCampaignLogs());
 
   useEffect(() => {
-    // Sync state with localStorage on mount
     setCampaigns(getCampaigns());
     setLogs(getCampaignLogs());
   }, []);
 
   useEffect(() => {
-    // Whenever campaigns or logs change, update localStorage
     saveCampaigns(campaigns);
     saveCampaignLogs(logs);
   }, [campaigns, logs]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!title || !description || !goal) {
+    if (!title || !description || !goal || !activeTime) {
       alert('Please fill in all required fields');
       return;
     }
 
+    const ttl = parseInt(activeTime, 10);
+    if (isNaN(ttl) || ttl <= 0) {
+      alert('Active time must be a positive number');
+      return;
+    }
+
     const newCampaign = {
-      id: Date.now(), // unique id
+      id: Date.now(),
       title,
       description,
       goal: parseFloat(goal),
       image,
+      activeTime: ttl,
     };
 
     setCampaigns((prev) => [...prev, newCampaign]);
@@ -73,7 +79,6 @@ const CreateCampaign = () => {
     ]);
     logAction('created', newCampaign);
 
-    // Remove campaign after 5 seconds
     setTimeout(() => {
       setCampaigns((prev) => {
         const updated = prev.filter((c) => c.id !== newCampaign.id);
@@ -86,13 +91,13 @@ const CreateCampaign = () => {
         }
         return updated;
       });
-    }, 5000);
+    }, ttl * 1000);
 
-    // Clear form
     setTitle('');
     setDescription('');
     setGoal('');
     setImage('');
+    setActiveTime('5');
   };
 
   return (
@@ -145,6 +150,19 @@ const CreateCampaign = () => {
             />
           </label>
         </div>
+        <div style={{ marginBottom: 10 }}>
+          <label>
+            Active Time (seconds)<br />
+            <input
+              type="number"
+              min="1"
+              value={activeTime}
+              onChange={(e) => setActiveTime(e.target.value)}
+              required
+              style={{ width: '100%' }}
+            />
+          </label>
+        </div>
         <button type="submit" style={{ padding: '0.5rem 1.5rem', fontSize: 16 }}>
           Create Campaign
         </button>
@@ -160,6 +178,10 @@ const CreateCampaign = () => {
               <strong>{c.title}</strong> - Goal: ${c.goal}
               <br />
               {c.description}
+              <br />
+              <span style={{ fontSize: 12, color: '#888' }}>
+                Active for: {c.activeTime} second{c.activeTime > 1 ? 's' : ''}
+              </span>
               {c.image && (
                 <div>
                   <img src={c.image} alt={c.title} style={{ maxWidth: 200, marginTop: 5 }} />
